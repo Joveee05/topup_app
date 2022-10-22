@@ -1,3 +1,5 @@
+const app = require('./app');
+
 const dotenv = require('dotenv');
 const User = require('./models/userModel');
 const mysql = require('mysql');
@@ -22,8 +24,6 @@ process.on('uncaughtException', (err) => {
 DB.authenticate()
   .then(() => console.log('Database Connected...'))
   .catch((err) => console.log('Error: ' + err));
-
-const app = require('./app');
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
