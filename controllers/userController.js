@@ -11,7 +11,7 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
   //   results: users.length,
   //   data: users,
   // });
-  res.send('Hello World');
+  res.send(users);
 });
 
 exports.createUser = catchAsync(async (req, res, next) => {
