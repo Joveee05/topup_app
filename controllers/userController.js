@@ -76,8 +76,8 @@ exports.updateBalance = async (req, res, next) => {
         },
       }
     );
-    res.status(200).render('top-up', {
-      title: 'Credit Account',
+    res.status(200).json({
+      status: 'success',
       data: update,
     });
   } else {
