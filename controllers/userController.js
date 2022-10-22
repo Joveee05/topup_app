@@ -6,12 +6,11 @@ const catchAsync = require('../utils/catchAsync');
 exports.getAllUsers = catchAsync(async (req, res, next) => {
   const users = await User.findAll();
 
-  // res.status(200).json({
-  //   status: 'success',
-  //   results: users.length,
-  //   data: users,
-  // });
-  res.send(users);
+  res.status(200).json({
+    status: 'success',
+    results: users.length,
+    data: users,
+  });
 });
 
 exports.createUser = catchAsync(async (req, res, next) => {
