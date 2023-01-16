@@ -5,7 +5,7 @@ dotenv.config({ path: './config.env' });
 
 const DB = new Sequelize({
   host: 'localhost',
-  database: 'truth',
+  database: process.env.database,
   username: process.env.USER,
   password: process.env.PASSWORD,
   dialect: 'mysql',
